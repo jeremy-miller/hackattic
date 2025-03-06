@@ -1,2 +1,3 @@
-# hackattic
-Solutions to the Hackattic challenges
+# Hackattic
+
+Solutions to the [Hackattic](https://hackattic.com/) challenges.
