@@ -7,12 +7,31 @@ import tseslint from 'typescript-eslint';
 export default [
     {
         files: ['**/*.{js,mjs,cjs,ts}'],
+    },
+    {
+        ignores: ['node_modules/**', 'dist/**'],
+    },
+    {
         languageOptions: {
             globals: globals.node,
         },
     },
     pluginJs.configs.recommended,
-    tseslint.configs.recommended,
-    tseslint.configs.stylistic,
+    ...tseslint.configs.strictTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked,
+    {
+        // for tseslint
+        languageOptions: {
+            parserOptions: {
+                projectService: true,
+                tsconfigRootDir: import.meta.dirname,
+            },
+        },
+    },
+    {
+        // disable type-checked linting for given files (will still do non-type-checked linting)
+        ...tseslint.configs.disableTypeChecked,
+        files: ['eslint.config.mjs'],
+    },
     eslintConfigPrettier,
 ];
