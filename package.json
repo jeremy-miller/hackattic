@@ -12,7 +12,7 @@
     "mini-miner": "ts-node src/mini-miner.ts"
   },
   "lint-staged": {
-    "**/*.ts": [
+    "*.{js,mjs,cjs,ts}": [
       "eslint --fix",
       "prettier --write --ignore-unknown"
     ]
