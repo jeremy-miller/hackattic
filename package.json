@@ -16,7 +16,8 @@
   "lint-staged": {
     "*.{js,mjs,cjs,ts}": [
       "eslint --fix",
-      "prettier --write --ignore-unknown"
+      "prettier --write --ignore-unknown",
+      "jest --bail"
     ]
   },
   "devDependencies": {
