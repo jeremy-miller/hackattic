@@ -12,4 +12,5 @@ Solutions to the [Hackattic](https://hackattic.com/) challenges.
 
 - Format: `npm run format`
 - Lint: `npm run lint`
+- Tests: `npm run test`
 - For solutions, run `npm run` and choose from the list

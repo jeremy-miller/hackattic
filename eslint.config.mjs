@@ -17,6 +17,15 @@ export default [
         },
     },
     jsdoc.configs['flat/recommended-typescript'],
+    {
+        files: ['jest.config.mjs'],
+        plugins: {
+            jsdoc,
+        },
+        rules: {
+            'jsdoc/check-tag-names': 'off',
+        },
+    },
     pluginJs.configs.recommended,
     ...tseslint.configs.strictTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
@@ -32,7 +41,7 @@ export default [
     {
         // disable type-checked linting for given files (will still do non-type-checked linting)
         ...tseslint.configs.disableTypeChecked,
-        files: ['eslint.config.mjs'],
+        files: ['eslint.config.mjs', 'jest.config.mjs'],
     },
     eslintConfigPrettier,
 ];
