@@ -17,7 +17,7 @@
     "*.{js,mjs,cjs,ts}": [
       "eslint --fix",
       "prettier --write --ignore-unknown",
-      "jest --bail"
+      "jest --bail --passWithNoTests"
     ]
   },
   "devDependencies": {
